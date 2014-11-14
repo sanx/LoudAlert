@@ -1,0 +1,20 @@
+{
+  "name": "LoudAlert",
+  "version": "0.0.0",
+  "authors": [
+    "Gerardo Moad <gerardo@gerardomoad.com>"
+  ],
+  "description": "Alerts you when you're being too loud",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2"
+  }
+}

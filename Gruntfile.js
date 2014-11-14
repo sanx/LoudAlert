@@ -16,6 +16,24 @@ module.exports = function(grunt) {
                         src: 'server.js',
                         dest: 'build/js',
                         expand: true
+                    },
+                    {
+                        cwd: 'src/js/webrtc-samples',
+                        src: 'soundmeter.js',
+                        dest: 'build/js/webrtc-samples',
+                        expand: true
+                    },
+                    {
+                        cwd: 'src/html',
+                        src: '**',
+                        dest: 'build/html',
+                        expand: true
+                    },
+                    {
+                        cwd: 'bower_components',
+                        src: ['backbone/backbone.js', 'underscore/underscore.js'],
+                        dest: 'build/js/bower_components',
+                        expand: true
                     }
                 ]
             }
@@ -23,6 +41,9 @@ module.exports = function(grunt) {
         shell: {
             'jsx': {
                 command: "node ./node_modules/react-tools/bin/jsx src/js build/rawjs"
+            },
+            'bower': {
+                command: "bower install"
             }
         },
         browserify: {
@@ -30,7 +51,7 @@ module.exports = function(grunt) {
         },
         watch: {
             scripts: {
-                files: ['src/js/*.js'],
+                files: ['src/js/*.js', 'src/html/*.html'],
                 tasks: ['clean', 'default', 'develop'],
                 options: {
                     spawn: false

@@ -26,13 +26,15 @@ appReact.get('/', function *(next) {
     var markup = "<!DOCTYPE html>\n" + React.renderToString(
         <LoudAlert />
     );
+    markup = React.renderToString(<LoudAlert />);
     this.body = markup;
     yield next;
 });
 
 console.log("approot: " + approot);
-app.use(mount('/static', serve(approot + '/build')));
-app.use(mount('/', appReact));
+app.use(mount('/static/js/', serve(approot + '/build/js')));
+app.use(mount('/', serve(approot + '/build/html')));
+//app.use(mount('/', appReact));
 
 app.listen(3000);
 console.log("listening on port 3000");
