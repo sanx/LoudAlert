@@ -239,7 +239,7 @@ var Controls = React.createClass({
             </label>
             <label>
                 <span>Input threshold: </span>
-                <input type="range" min="0.1" max="100" defaultValue="100" step="1" onChange={this.onThresholdChange} value={this.state.thresholdValue * 100}/>
+                <input type="range" min="1" max="100" defaultValue="100" step="1" onChange={this.onThresholdChange} value={this.state.thresholdValue * 100}/>
                 <span>{(this.state.thresholdValue).toFixed(2)}</span>
             </label>
             <label>

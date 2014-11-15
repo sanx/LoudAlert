@@ -239,7 +239,7 @@ var Controls = React.createClass({displayName: 'Controls',
             ), 
             React.createElement("label", null, 
                 React.createElement("span", null, "Input threshold: "), 
-                React.createElement("input", {type: "range", min: "0.1", max: "100", defaultValue: "100", step: "1", onChange: this.onThresholdChange, value: this.state.thresholdValue * 100}), 
+                React.createElement("input", {type: "range", min: "1", max: "100", defaultValue: "100", step: "1", onChange: this.onThresholdChange, value: this.state.thresholdValue * 100}), 
                 React.createElement("span", null, (this.state.thresholdValue).toFixed(2))
             ), 
             React.createElement("label", null, 
