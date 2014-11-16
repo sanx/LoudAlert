@@ -720,6 +720,9 @@ getSnapshot = function () {
 stop = function () {
     soundMeter.stop();
     clearInterval(sampleInterval);
+    instantMeter = 0;
+    slowMeter = 0;
+    clipMeter = 0;
 }
 
 module.exports = {
