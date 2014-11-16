@@ -36,6 +36,22 @@ module.exports = function(grunt) {
                         expand: true
                     }
                 ]
+            },
+            'gh-pages': {
+                files: [
+                    {
+                        cwd: 'build/js',
+                        src: '**',
+                        dest: 'gh-pages/static/js',
+                        expand: true
+                    },
+                    {
+                        cwd: 'build/html',
+                        src: '**',
+                        dest: 'gh-pages',
+                        expand: true
+                    }
+                ]
             }
         },
         shell: {
